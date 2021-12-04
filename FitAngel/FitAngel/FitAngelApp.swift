@@ -11,7 +11,14 @@ import SwiftUI
 struct FitAngelApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if #available(iOS 15.0, *) {
+                ExerciseCategoriesView()
+                    .background(Color(red: 0.157, green: 0.173, blue: 0.22, opacity: 1), ignoresSafeAreaEdges: .all)
+            } else {
+                ExerciseCategoriesView()
+                    .background(Color(red: 0.157, green: 0.173, blue: 0.22, opacity: 1))
+            }
+
         }
     }
 }

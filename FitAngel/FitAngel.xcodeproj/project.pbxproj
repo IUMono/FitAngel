@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		294B9CDF2757BF8C004C78FB /* ExerciseGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294B9CDE2757BF8C004C78FB /* ExerciseGroupCell.swift */; };
 		EA30B4692747EA6600DEA817 /* FitAngelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30B4682747EA6600DEA817 /* FitAngelApp.swift */; };
-		EA30B46B2747EA6600DEA817 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30B46A2747EA6600DEA817 /* ContentView.swift */; };
+		EA30B46B2747EA6600DEA817 /* ExerciseCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30B46A2747EA6600DEA817 /* ExerciseCategoriesView.swift */; };
 		EA30B46D2747EA6800DEA817 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA30B46C2747EA6800DEA817 /* Assets.xcassets */; };
 		EA30B4702747EA6800DEA817 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA30B46F2747EA6800DEA817 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		294B9CDE2757BF8C004C78FB /* ExerciseGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseGroupCell.swift; sourceTree = "<group>"; };
 		EA30B4652747EA6600DEA817 /* FitAngel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitAngel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA30B4682747EA6600DEA817 /* FitAngelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitAngelApp.swift; sourceTree = "<group>"; };
-		EA30B46A2747EA6600DEA817 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EA30B46A2747EA6600DEA817 /* ExerciseCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCategoriesView.swift; sourceTree = "<group>"; };
 		EA30B46C2747EA6800DEA817 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA30B46F2747EA6800DEA817 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +34,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		294B9CDD2757BEEC004C78FB /* exerciseCategories */ = {
+			isa = PBXGroup;
+			children = (
+				EA30B46A2747EA6600DEA817 /* ExerciseCategoriesView.swift */,
+				294B9CDE2757BF8C004C78FB /* ExerciseGroupCell.swift */,
+			);
+			path = exerciseCategories;
+			sourceTree = "<group>";
+		};
 		EA30B45C2747EA6600DEA817 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +62,8 @@
 		EA30B4672747EA6600DEA817 /* FitAngel */ = {
 			isa = PBXGroup;
 			children = (
+				294B9CDD2757BEEC004C78FB /* exerciseCategories */,
 				EA30B4682747EA6600DEA817 /* FitAngelApp.swift */,
-				EA30B46A2747EA6600DEA817 /* ContentView.swift */,
 				EA30B46C2747EA6800DEA817 /* Assets.xcassets */,
 				EA30B46E2747EA6800DEA817 /* Preview Content */,
 			);
@@ -137,7 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA30B46B2747EA6600DEA817 /* ContentView.swift in Sources */,
+				EA30B46B2747EA6600DEA817 /* ExerciseCategoriesView.swift in Sources */,
+				294B9CDF2757BF8C004C78FB /* ExerciseGroupCell.swift in Sources */,
 				EA30B4692747EA6600DEA817 /* FitAngelApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
