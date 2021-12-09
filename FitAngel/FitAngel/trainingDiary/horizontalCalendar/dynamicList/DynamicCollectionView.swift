@@ -16,9 +16,9 @@ struct DynamicCollectionView<Row: DynamicListRow>: View {
             HStack {
                 ForEach(listProvider.list) {
                     Row(item: $0)
+                        .frame(width: 62, height: 76)
                         .background(Color.gray)
-                        .cornerRadius(5)
-                        .padding(10)
+                        .cornerRadius(20)
                 }
             }
         }
