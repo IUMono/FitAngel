@@ -28,49 +28,51 @@ struct ExerciseCategoriesView: View {
     
     var body: some View {
         
-        NavigationView {
-        VStack {
-            
-            Button {
+        
+        
+        ZStack {
+            Color.blackLight.ignoresSafeArea()
+            VStack {
+                Button {
+                    
+                } label: {
+                    Spacer()
+                    NavigationLink("Создать упражнение", destination: AddNewExercise())
+                        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    Spacer()
+                }
                 
-            } label: {
-                Spacer()
-                Text("Создать упражнение")
-                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                Spacer()
-            }
-            
-            .foregroundColor(.black)
-            .background(Color.white)
-            .cornerRadius(20)
-            .padding()
-            
-            HStack {
+                .foregroundColor(.black)
+                .background(Color.white)
+                .cornerRadius(20)
+                .padding()
                 
-                RoundedRectangle(cornerRadius: 0)
-                    .frame(height: 1)
-                    .foregroundColor(Color.gray)
                 
-                Text("или выберите базовые")
-                    .font(.system(size: 14))
-                    .foregroundColor(Color.gray)
-                    .layoutPriority(1)
+                HStack {
+                    
+                    RoundedRectangle(cornerRadius: 0)
+                        .frame(height: 1)
+                        .foregroundColor(Color.gray)
+                    
+                    Text("или выберите базовые")
+                        .font(.system(size: 14))
+                        .foregroundColor(Color.gray)
+                        .layoutPriority(1)
+                    
+                    RoundedRectangle(cornerRadius: 0)
+                        .frame(height: 1)
+                        .foregroundColor(Color.gray)
+                    
+                }
                 
-                RoundedRectangle(cornerRadius: 0)
-                    .frame(height: 1)
-                    .foregroundColor(Color.gray)
-                
-            }
-                
-            ScrollView {
-                ForEach(groupName) {
-                    ExerciseGroupCell(model: $0)
-                        .background(Color(red: 0.157, green: 0.173, blue: 0.22, opacity: 1))
+                ScrollView {
+                    ForEach(groupName) {
+                        ExerciseGroupCell(model: $0)
+                    }
                 }
             }
         }
     }
-}
 }
 
 struct ContentView_Previews:
