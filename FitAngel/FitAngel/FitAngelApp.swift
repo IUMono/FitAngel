@@ -19,6 +19,7 @@ struct FitAngelApp: App {
 //                    .background(Color(red: 0.157, green: 0.173, blue: 0.22, opacity: 1))
 //            }
             TrainingDiaryView()
+                .preferredColorScheme(.dark)
         }
     }
 }

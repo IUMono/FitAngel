@@ -8,16 +8,58 @@
 import Foundation
 import Combine
 
+enum DayOfWeek: Int, CustomStringConvertible {
+    case sunday = 1 // воскресенье
+    case monday // понедельник
+    case tuesday
+    case wednesday
+    case thursday
+    case friday
+    case saturday
+    
+    var description: String {
+        switch self {
+        case .monday:
+            return "пн"
+        case .tuesday:
+            return "вт"
+        case .wednesday:
+            return "ср"
+        case .thursday:
+            return "чт"
+        case .friday:
+            return "пт"
+        case .saturday:
+            return "сб"
+        case .sunday:
+            return "вс"
+        }
+    }
+}
+
 final class HorizontalCalendarItemModel: ListDataItem, ObservableObject {
     
     @Published var date: Date?
+    @Published var hasTraining: Bool?
     
     var dayOfWeek: String {
-        return "пн"
+        guard let date = date else {
+            return ""
+        }
+        
+        let weekDayComponent = Calendar.current.component(.weekday, from: date)
+        
+        return DayOfWeek(rawValue: weekDayComponent)?.description ?? ""
     }
     
     var dayOfMonth: String {
-        return "11"
+        guard let date = date else {
+            return ""
+        }
+        
+        let dayComponent = Calendar.current.component(.day, from: date)
+        
+        return String(dayComponent)
     }
     
     var index: Int = 0
@@ -34,7 +76,7 @@ final class HorizontalCalendarItemModel: ListDataItem, ObservableObject {
     
     func fetchData() {
         if !dataIsFetched {
-            dataPublisher = HorizontalCalendarDataStore.getDate(forIndex: index)
+            dataPublisher = HorizontalCalendarDataStore.getDate(for: index)
                 .receive(on: DispatchQueue.main)
                 .sink { date in
                     self.date = date

@@ -13,14 +13,18 @@ struct DynamicCollectionView<Row: DynamicListRow>: View {
     
     var body: some View {
         ScrollView(.horizontal) {
-            HStack {
-                ForEach(listProvider.list) {
-                    Row(item: $0)
+            LazyHStack {
+                ForEach(listProvider.list) { item in
+                    
+                    Row(item: item)
+                        .onAppear(perform: {
+                            self.listProvider.fetchMoreItemsIfNeeded(currentIndex: item.index)
+                        })
                         .frame(width: 62, height: 76)
-                        .background(Color.gray)
+                        .background(Color.darkGrey)
                         .cornerRadius(20)
                 }
             }
-        }
+        }.frame(height: 76)
     }
 }

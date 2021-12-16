@@ -8,7 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct TrainingDiaryCellModel {
+struct TrainingDiaryCellModel: Identifiable {
+    let id: UUID
     let icon: String
     let title: String
     let subtitle: String
@@ -16,16 +17,19 @@ struct TrainingDiaryCellModel {
 
 /// Ячейка с упражнением тренировки
 struct TrainingDiaryCell: View {
+    
+    var model: TrainingDiaryCellModel
+    
     var body: some View {
         HStack(alignment: .top) {
-            Image("Руки")
+            Image(model.icon)
                 .resizable().aspectRatio(contentMode: .fit)
                 .frame(width: 16, height: 16)
             VStack {
-                Text("Подъем гантелей")
+                Text(model.title)
                     .foregroundColor(Color(red: 0.529, green: 0.557, blue: 0.62))
                     .font(.system(size: 16))
-                Text("К подбородку стоя")
+                Text(model.subtitle)
                     .foregroundColor(Color(red: 0.529, green: 0.557, blue: 0.62))
                     .font(.system(size: 14))
             }
@@ -35,6 +39,6 @@ struct TrainingDiaryCell: View {
 
 struct TrainingDiaryCell_Previews: PreviewProvider {
     static var previews: some View {
-        TrainingDiaryCell().background(Color.darkGrey)
+        TrainingDiaryCell(model: TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя")).background(Color.darkGrey)
     }
 }

@@ -15,7 +15,6 @@ struct ExerciseCategory: Identifiable {
 
 struct ExerciseCategoriesView: View {
     
-    
     var groupName = [
         ExerciseCategory(imageName: "Руки", name: "Руки"),
         ExerciseCategory(imageName: "Плечи", name: "Плечи"),
@@ -27,8 +26,6 @@ struct ExerciseCategoriesView: View {
     ]
     
     var body: some View {
-        
-        
         
         ZStack {
             Color.blackLight.ignoresSafeArea()

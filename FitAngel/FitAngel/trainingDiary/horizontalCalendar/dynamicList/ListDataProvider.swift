@@ -35,11 +35,27 @@ class ListDataProvider<Item: ListDataItem>: ObservableObject {
     
     /// Extend the list if we are close to the end, based on the specified index
     func fetchMoreItemsIfNeeded(currentIndex: Int) {
-        guard currentIndex >= list.count - prefetchMargin else { return }
+        print("fetchMoreItemsIfNeeded currentIndex = \(currentIndex)")
+        guard currentIndex >= list.count - prefetchMargin else {
+            return
+        }
         let startIndex = list.count
         for currentIndex in startIndex ..< max(startIndex + itemBatchSize, currentIndex) {
             list.append(Item(index: currentIndex))
             list[currentIndex].fetchData()
         }
+    }
+    
+    func fetchMoreItemsIfNeeded2(currentIndex: Int) {
+        print("fetchMoreItemsIfNeeded currentIndex = \(currentIndex)")
+        
+        if currentIndex >= list.count - prefetchMargin {
+            let startIndex = list.count
+            for currentIndex in startIndex ..< max(startIndex + itemBatchSize, currentIndex) {
+                list.append(Item(index: currentIndex))
+                list[currentIndex].fetchData()
+            }
+        }
+        
     }
 }
