@@ -21,7 +21,7 @@ struct DynamicCollectionView<Row: DynamicListRow>: View {
                             self.listProvider.fetchMoreItemsIfNeeded(currentIndex: item.index)
                         })
                         .frame(width: 62, height: 76)
-                        .background(Color.darkGrey)
+                        .background(Color.blackDark)
                         .cornerRadius(20)
                 }
             }

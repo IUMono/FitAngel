@@ -1,5 +1,5 @@
 //
-//  AddNewExercise.swift
+//  AddNewExerciseView.swift
 //  FitAngel
 //
 //  Created by Света on 09.12.2021.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct AddNewExercise: View {
+struct AddNewExerciseView: View {
     
     @State private var nameExercise: String = ""
     @State private var subtitle: String = ""
 
     var body: some View {
         ZStack {
-            Color.darkGrey.ignoresSafeArea()
+            Color.blackDark.ignoresSafeArea()
                 .navigationTitle(nameExercise).foregroundColor(.white)
             VStack {
 //                Text(String.nameExercise)
@@ -54,7 +54,7 @@ struct AddNewExercise: View {
 
 struct AddNewExercise_Previews: PreviewProvider {
     static var previews: some View {
-        AddNewExercise()
+        AddNewExerciseView()
     }
 }
 
@@ -65,7 +65,7 @@ struct OvalTextFieldStyle: TextFieldStyle {
             .background(LinearGradient(gradient: Gradient(colors: [Color.blackLight, Color.blackLight]), startPoint: .topLeading, endPoint: .bottomTrailing))
             .cornerRadius(15)
             .foregroundColor(.gray)
-            .shadow(color: .darkGrey, radius: 10)
+            .shadow(color: .blackDark, radius: 10)
     }
 }
 

@@ -34,7 +34,7 @@ struct ExerciseCategoriesView: View {
                     
                 } label: {
                     Spacer()
-                    NavigationLink("Создать упражнение", destination: AddNewExercise())
+                    NavigationLink("Создать упражнение", destination: AddNewExerciseView())
                         .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                     Spacer()
                 }
@@ -75,15 +75,7 @@ struct ExerciseCategoriesView: View {
 struct ContentView_Previews:
     PreviewProvider {
     static var previews: some View {
-        if #available(iOS 15.0, *) {
-            ExerciseCategoriesView()
-                .background(Color(red: 0.157, green: 0.173, blue: 0.22, opacity: 1), ignoresSafeAreaEdges: .all)
-        } else {
-            ExerciseCategoriesView()
-                .background(Color(red: 0.157, green: 0.173, blue: 0.22, opacity: 1))
-        }
+        ExerciseCategoriesView()
     }
 }
-
-
 

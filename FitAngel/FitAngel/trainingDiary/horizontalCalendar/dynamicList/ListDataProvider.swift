@@ -30,11 +30,11 @@ class ListDataProvider<Item: ListDataItem>: ObservableObject {
     func reset() {
         list = []
         listID = UUID()
-        fetchMoreItemsIfNeeded(currentIndex: -1)
+        fetchMoreItemsIfNeeded(currentIndex: 0) //-1)
     }
     
     /// Extend the list if we are close to the end, based on the specified index
-    func fetchMoreItemsIfNeeded(currentIndex: Int) {
+    func fetchMoreItemsIfNeededOLD(currentIndex: Int) {
         print("fetchMoreItemsIfNeeded currentIndex = \(currentIndex)")
         guard currentIndex >= list.count - prefetchMargin else {
             return
@@ -46,11 +46,11 @@ class ListDataProvider<Item: ListDataItem>: ObservableObject {
         }
     }
     
-    func fetchMoreItemsIfNeeded2(currentIndex: Int) {
+    func fetchMoreItemsIfNeeded(currentIndex: Int) {
         print("fetchMoreItemsIfNeeded currentIndex = \(currentIndex)")
         
-        if currentIndex >= list.count - prefetchMargin {
-            let startIndex = list.count
+        if currentIndex >= (list.last?.index ?? 0) - prefetchMargin {
+            let startIndex = (list.last?.index ?? 0) //list.count
             for currentIndex in startIndex ..< max(startIndex + itemBatchSize, currentIndex) {
                 list.append(Item(index: currentIndex))
                 list[currentIndex].fetchData()

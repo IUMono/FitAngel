@@ -34,6 +34,7 @@ struct HorizontalCalendarCell: DynamicListRow {
 
 struct HorizontalCalendarCell_Previews: PreviewProvider {
     static var previews: some View {
-        HorizontalCalendarCell(item: HorizontalCalendarItemModel(index: 1)).background(Color.darkGrey)
+        HorizontalCalendarCell(item: HorizontalCalendarItemModel(index: 1))
+            .background(Color.blackDark)
     }
 }

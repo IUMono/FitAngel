@@ -14,23 +14,53 @@ struct TrainingDiaryView: View {
     var listProvider = ListDataProvider<HorizontalCalendarItemModel>(itemBatchCount: 20, prefetchMargin: 3)
     
     // моки
-    var viewModels: [TrainingDiaryCellModel] = [TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя"), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя"), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя"), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя"), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя"), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя"), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя"), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя"), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя"), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя")]
+//    var viewModels: [TrainingDiaryCellModel] = []
+    var viewModels: [TrainingDiaryCellModel] = [TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: false), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: false), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: false), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true)]
     
     @State private var isPresented = false
     
     var body: some View {
         NavigationView {
             ZStack {
-                Color.darkGrey.ignoresSafeArea()
+                Color.blackDark.ignoresSafeArea()
                 VStack {
                     DynamicCollectionView<HorizontalCalendarCell>(listProvider: listProvider)
                     
-                    List.init(viewModels) {
-                        TrainingDiaryCell(model: $0)
+                    if viewModels.isEmpty {
+                        
+                        Spacer()
+                        
+                        HStack {
+                            Text("Составьте план тренировки")
+                                .fontWeight(.bold)
+                                .multilineTextAlignment(.leading)
+                                .font(.system(size: 24))
+                                .padding()
+                            Spacer()
+                        }
+                        
+                        HStack {
+                            Text("Выберите упражнения из списка или создайте свои")
+                                .lineLimit(0)
+                                .font(.system(size: 14))
+                                .multilineTextAlignment(.leading)
+                                .padding(.horizontal)
+                            Spacer()
+                        }
+                        
+                        Image("Arrow")
+                    } else {
+                        ScrollView {
+                            ForEach(viewModels) {
+                                TrainingDiaryCell(model: $0)
+                            }
+                        }
                     }
                     
+                    Spacer()
+                    
                     Button {
-//                        self.listProvider.reset()
+                        
                     } label: {
                         Spacer()
                         NavigationLink("Добавить упражнения", destination: ExerciseCategoriesView())
@@ -48,6 +78,7 @@ struct TrainingDiaryView: View {
                 Button {
                     
                 } label: {
+                    
                     NavigationLink("Settings", destination: SettingsViewControllerRepresentable())
                 }
 

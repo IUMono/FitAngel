@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2932931D27626A1D005E1C9F /* AddNewExercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2932931C27626A1D005E1C9F /* AddNewExercise.swift */; };
+		2932931D27626A1D005E1C9F /* AddNewExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2932931C27626A1D005E1C9F /* AddNewExerciseView.swift */; };
 		294B9CDF2757BF8C004C78FB /* ExerciseGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294B9CDE2757BF8C004C78FB /* ExerciseGroupCell.swift */; };
 		29AA31AD276B88B9004D63A6 /* LabelWithButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AA31AC276B88B8004D63A6 /* LabelWithButtonView.swift */; };
 		EA30B4692747EA6600DEA817 /* FitAngelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30B4682747EA6600DEA817 /* FitAngelApp.swift */; };
@@ -28,7 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2932931C27626A1D005E1C9F /* AddNewExercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewExercise.swift; sourceTree = "<group>"; };
+		2932931C27626A1D005E1C9F /* AddNewExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewExerciseView.swift; sourceTree = "<group>"; };
 		294B9CDE2757BF8C004C78FB /* ExerciseGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseGroupCell.swift; sourceTree = "<group>"; };
 		29AA31AC276B88B8004D63A6 /* LabelWithButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithButtonView.swift; sourceTree = "<group>"; };
 		EA30B4652747EA6600DEA817 /* FitAngel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitAngel.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,7 +63,7 @@
 		2932931B27626A00005E1C9F /* newExercise */ = {
 			isa = PBXGroup;
 			children = (
-				2932931C27626A1D005E1C9F /* AddNewExercise.swift */,
+				2932931C27626A1D005E1C9F /* AddNewExerciseView.swift */,
 				29AA31AC276B88B8004D63A6 /* LabelWithButtonView.swift */,
 			);
 			path = newExercise;
@@ -243,7 +243,7 @@
 				EA30B48F275BA8A400DEA817 /* TrainingDiaryView.swift in Sources */,
 				29AA31AD276B88B9004D63A6 /* LabelWithButtonView.swift in Sources */,
 				294B9CDF2757BF8C004C78FB /* ExerciseGroupCell.swift in Sources */,
-				2932931D27626A1D005E1C9F /* AddNewExercise.swift in Sources */,
+				2932931D27626A1D005E1C9F /* AddNewExerciseView.swift in Sources */,
 				EA30B4A1275F455D00DEA817 /* HorizontalCalendarModel.swift in Sources */,
 				EA30B49F275BA94E00DEA817 /* DynamicCollectionView.swift in Sources */,
 				EAC8E3072769D17A00A03208 /* SettingsViewController.swift in Sources */,

@@ -13,6 +13,7 @@ struct TrainingDiaryCellModel: Identifiable {
     let icon: String
     let title: String
     let subtitle: String
+    let needAddButton: Bool
 }
 
 /// Ячейка с упражнением тренировки
@@ -23,22 +24,46 @@ struct TrainingDiaryCell: View {
     var body: some View {
         HStack(alignment: .top) {
             Image(model.icon)
-                .resizable().aspectRatio(contentMode: .fit)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
                 .frame(width: 16, height: 16)
-            VStack {
+                .padding([.leading, .bottom, .trailing])
+            
+            VStack(alignment: .leading) {
                 Text(model.title)
-                    .foregroundColor(Color(red: 0.529, green: 0.557, blue: 0.62))
+                    .foregroundColor(.greyColor)
                     .font(.system(size: 16))
                 Text(model.subtitle)
-                    .foregroundColor(Color(red: 0.529, green: 0.557, blue: 0.62))
+                    .foregroundColor(.greyColor)
                     .font(.system(size: 14))
+                
+                if model.needAddButton {
+                    Button {
+                        
+                    } label: {
+                        Text("Добавить")
+                            .padding()
+                    }
+                    .foregroundColor(.gray)
+                    .background(Color.blackLight)
+                    .cornerRadius(20)
+                }
             }
+            Spacer()
         }
     }
 }
 
 struct TrainingDiaryCell_Previews: PreviewProvider {
     static var previews: some View {
-        TrainingDiaryCell(model: TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя")).background(Color.darkGrey)
+        let model = TrainingDiaryCellModel(
+            id: UUID(),
+            icon: "Руки",
+            title: "Подъем гантелей",
+            subtitle: "К подбородку стоя",
+            needAddButton: true)
+        
+        TrainingDiaryCell(model: model)
+            .background(Color.blackDark)
     }
 }
