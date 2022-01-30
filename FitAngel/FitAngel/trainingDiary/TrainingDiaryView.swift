@@ -11,11 +11,19 @@ import SwiftUI
 /// Экран тренировок
 struct TrainingDiaryView: View {
     
-    var listProvider = ListDataProvider<HorizontalCalendarItemModel>(itemBatchCount: 20, prefetchMargin: 3)
-    
     // моки
 //    var viewModels: [TrainingDiaryCellModel] = []
-    var viewModels: [TrainingDiaryCellModel] = [TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: false), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: false), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: false), TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true)]
+    var viewModels: [TrainingDiaryCellModel] = [
+        TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true),
+        TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: false),
+        TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true),
+        TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true),
+        TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true),
+        TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: false),
+        TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true),
+        TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true),
+        TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: false),
+        TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true)]
     
     @State private var isPresented = false
     
@@ -24,7 +32,9 @@ struct TrainingDiaryView: View {
             ZStack {
                 Color.blackDark.ignoresSafeArea()
                 VStack {
-                    DynamicCollectionView<HorizontalCalendarCell>(listProvider: listProvider)
+                    
+                    HorizontalCalendarViewRepresentable()
+                        .frame(width: nil, height: 76, alignment: .center)
                     
                     if viewModels.isEmpty {
                         
@@ -60,13 +70,16 @@ struct TrainingDiaryView: View {
                     Spacer()
                     
                     Button {
-                        
+                        isPresented.toggle()
                     } label: {
                         Spacer()
-                        NavigationLink("Добавить упражнения", destination: ExerciseCategoriesView())
+                        Text("Добавить упражнения")
                             .padding()
                         Spacer()
                     }
+                    .sheet(isPresented: $isPresented, onDismiss: {
+                        
+                    }, content: { ExerciseCategoriesView() })
                     .foregroundColor(Color.black)
                     .background(Color.yellow)
                     .cornerRadius(20)

@@ -11,13 +11,6 @@ import SwiftUI
 struct FitAngelApp: App {
     var body: some Scene {
         WindowGroup {
-//            if #available(iOS 15.0, *) {
-//                TrainingDiaryView()
-//                    .background(Color(red: 0.157, green: 0.173, blue: 0.22, opacity: 1), ignoresSafeAreaEdges: .all)
-//            } else {
-//                TrainingDiaryView()
-//                    .background(Color(red: 0.157, green: 0.173, blue: 0.22, opacity: 1))
-//            }
             TrainingDiaryView()
                 .preferredColorScheme(.dark)
         }

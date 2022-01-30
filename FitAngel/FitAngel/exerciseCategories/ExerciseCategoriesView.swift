@@ -25,20 +25,25 @@ struct ExerciseCategoriesView: View {
         ExerciseCategory(imageName: "Кардио", name: "Кардио")
     ]
     
+    @State private var isPresented = false
+    
     var body: some View {
         
         ZStack {
             Color.blackLight.ignoresSafeArea()
             VStack {
                 Button {
-                    
+                    isPresented.toggle()
                 } label: {
                     Spacer()
-                    NavigationLink("Создать упражнение", destination: AddNewExerciseView())
+//                    NavigationLink("Создать упражнение", destination: AddNewExerciseView())
+                    Text("Создать упражнение")
                         .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                     Spacer()
                 }
-                
+                .sheet(isPresented: $isPresented, content: {
+                    AddNewExerciseView()
+                })
                 .foregroundColor(.black)
                 .background(Color.white)
                 .cornerRadius(20)
