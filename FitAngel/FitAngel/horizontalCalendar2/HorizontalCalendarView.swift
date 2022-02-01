@@ -41,12 +41,14 @@ extension CalendarDataSource: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: HorizontalCalendarCollectionCell.self),
-                                                            for: indexPath) as? HorizontalCalendarCollectionCell else {
-            return UICollectionViewCell()
-        }
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: "cell",
+            for: indexPath) as? HorizontalCalendarCollectionCell else {
+                
+                return UICollectionViewCell()
+            }
         let model = getDate(for: indexPath.row)
-        cell.setup(day: model.dayComponent, backgroundColor: model.isToday ? .darkGray : .blue)
+        cell.setup(day: model.dayComponent, backgroundColor: model.isToday ? .blackLight : .blackDark)
         return cell
     }
 }
@@ -76,7 +78,7 @@ class HorizontalCalendarView: UIView {
         
         (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.itemSize = CGSize(width: 62, height: 76)
         
-        collectionView.register(HorizontalCalendarCollectionCell.self, forCellWithReuseIdentifier: String(describing: HorizontalCalendarCollectionCell.self))
+        collectionView.register(HorizontalCalendarCollectionCell.self, forCellWithReuseIdentifier: "cell")
         
         collectionView.delegate = dataSource
         collectionView.dataSource = dataSource

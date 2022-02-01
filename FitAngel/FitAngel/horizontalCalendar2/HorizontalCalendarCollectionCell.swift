@@ -7,16 +7,17 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 // Ячейка горизонтального календаря
 final class HorizontalCalendarCollectionCell: UICollectionViewCell {
     private let dayLabel = UILabel()
     
-    private var unselectedBackgroundColor = UIColor.blue
+    private var unselectedBackgroundColor = UIColor.white
     
     override var isSelected: Bool {
         didSet {
-            contentView.backgroundColor = isSelected ? .purple : unselectedBackgroundColor
+            setupSelectionStyle()
         }
     }
     
@@ -42,6 +43,17 @@ final class HorizontalCalendarCollectionCell: UICollectionViewCell {
     func setup(day: Int, backgroundColor: UIColor) {
         dayLabel.text = day.description
         unselectedBackgroundColor = backgroundColor
-        contentView.backgroundColor = unselectedBackgroundColor
+        setupSelectionStyle()
+        
+    }
+    
+    private func setupSelectionStyle() {
+        if isSelected {
+            contentView.backgroundColor = .white
+            dayLabel.textColor = .black
+        } else {
+            contentView.backgroundColor = unselectedBackgroundColor
+            dayLabel.textColor = .white
+        }
     }
 }
