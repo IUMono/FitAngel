@@ -1,5 +1,5 @@
 //
-//  WeekDay.swift
+//  HorizontalCalendarDayOfWeek.swift
 //  FitAngel
 //
 //  Created by Света on 01.02.2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum DayOfWeek: Int, CustomStringConvertible {
+enum HorizontalCalendarDayOfWeek: Int, CustomStringConvertible {
     case sunday = 1 // воскресенье
     case monday // понедельник
     case tuesday

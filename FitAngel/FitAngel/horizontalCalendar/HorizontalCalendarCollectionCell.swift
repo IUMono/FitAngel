@@ -51,7 +51,7 @@ final class HorizontalCalendarCollectionCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setup(day: Int, week: DayOfWeek, backgroundColor: UIColor) {
+    func setup(day: Int, week: HorizontalCalendarDayOfWeek, backgroundColor: UIColor) {
         dayLabel.text = day.description
         weekLabel.text = week.description
         unselectedBackgroundColor = backgroundColor

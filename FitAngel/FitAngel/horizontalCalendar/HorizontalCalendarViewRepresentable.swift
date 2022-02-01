@@ -10,13 +10,12 @@ import UIKit
 import SwiftUI
 
 struct HorizontalCalendarViewRepresentable: UIViewRepresentable {
-//    @Binding var days: [Int]
 
     func makeUIView(context: Context) -> HorizontalCalendarView {
         HorizontalCalendarView()
     }
 
     func updateUIView(_ uiView: HorizontalCalendarView, context: Context) {
-//        uiView.setup(days: days)
+        
     }
 }
