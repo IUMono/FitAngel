@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2932931D27626A1D005E1C9F /* AddNewExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2932931C27626A1D005E1C9F /* AddNewExerciseView.swift */; };
 		294B9CDF2757BF8C004C78FB /* ExerciseGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 294B9CDE2757BF8C004C78FB /* ExerciseGroupCell.swift */; };
+		299CF3B727A932C800A3B4E6 /* WeekDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 299CF3B627A932C800A3B4E6 /* WeekDay.swift */; };
 		29AA31AD276B88B9004D63A6 /* LabelWithButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AA31AC276B88B8004D63A6 /* LabelWithButtonView.swift */; };
 		EA30B4692747EA6600DEA817 /* FitAngelApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30B4682747EA6600DEA817 /* FitAngelApp.swift */; };
 		EA30B46B2747EA6600DEA817 /* ExerciseCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30B46A2747EA6600DEA817 /* ExerciseCategoriesView.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		2932931C27626A1D005E1C9F /* AddNewExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewExerciseView.swift; sourceTree = "<group>"; };
 		294B9CDE2757BF8C004C78FB /* ExerciseGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseGroupCell.swift; sourceTree = "<group>"; };
+		299CF3B627A932C800A3B4E6 /* WeekDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDay.swift; sourceTree = "<group>"; };
 		29AA31AC276B88B8004D63A6 /* LabelWithButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelWithButtonView.swift; sourceTree = "<group>"; };
 		EA30B4652747EA6600DEA817 /* FitAngel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitAngel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA30B4682747EA6600DEA817 /* FitAngelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitAngelApp.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				EA6048172795C56700130A06 /* HorizontalCalendarView.swift */,
 				EA604819279EC49D00130A06 /* HorizontalCalendarCollectionCell.swift */,
 				EA60481B279EC52400130A06 /* HorizontalCalendarViewRepresentable.swift */,
+				299CF3B627A932C800A3B4E6 /* WeekDay.swift */,
 			);
 			path = horizontalCalendar2;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				299CF3B727A932C800A3B4E6 /* WeekDay.swift in Sources */,
 				EA30B4A5275F525A00DEA817 /* TrainingDiaryCell.swift in Sources */,
 				EA30B4A8276263D100DEA817 /* colorExtension.swift in Sources */,
 				EA30B46B2747EA6600DEA817 /* ExerciseCategoriesView.swift in Sources */,

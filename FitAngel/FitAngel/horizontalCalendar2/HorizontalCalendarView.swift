@@ -10,6 +10,7 @@ import SwiftUI
 
 struct DateItemModel {
     let dayComponent: Int
+    let dayOfWeek: DayOfWeek
     let isToday: Bool
 }
 
@@ -26,10 +27,16 @@ class CalendarDataSource: NSObject {
         let value = index - (count / 2)
         guard let date = calendar.date(byAdding: .day, value: value, to: today) else {
             assertionFailure("Что-то странное, не удалось получить дату, пофиксить")
-            return DateItemModel(dayComponent: calendar.component(.day, from: today), isToday: true)
+            return DateItemModel(dayComponent: calendar.component(.day, from: today), dayOfWeek: .friday, isToday: true)
+        }
+        let weekComponent = calendar.component(.weekday, from: date)
+        guard let dayOfWeek = DayOfWeek(rawValue: weekComponent) else {
+            assertionFailure("Что-то странное, не удалось получить день недели, пофиксить")
+            return DateItemModel(dayComponent: calendar.component(.day, from: today), dayOfWeek: .friday, isToday: true)
         }
         let dayComponent = calendar.component(.day, from: date)
-        return DateItemModel(dayComponent: dayComponent, isToday: date == today)
+        
+        return DateItemModel(dayComponent: dayComponent, dayOfWeek: dayOfWeek, isToday: date == today)
     }
 }
 
@@ -48,7 +55,7 @@ extension CalendarDataSource: UICollectionViewDelegate, UICollectionViewDataSour
                 return UICollectionViewCell()
             }
         let model = getDate(for: indexPath.row)
-        cell.setup(day: model.dayComponent, backgroundColor: model.isToday ? .blackLight : .blackDark)
+        cell.setup(day: model.dayComponent, week: model.dayOfWeek, backgroundColor: model.isToday ? .blackLight : .blackDark)
         return cell
     }
 }
