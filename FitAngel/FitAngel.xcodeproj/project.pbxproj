@@ -16,7 +16,7 @@
 		EA30B46D2747EA6800DEA817 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA30B46C2747EA6800DEA817 /* Assets.xcassets */; };
 		EA30B4702747EA6800DEA817 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA30B46F2747EA6800DEA817 /* Preview Assets.xcassets */; };
 		EA30B48F275BA8A400DEA817 /* TrainingDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30B48E275BA8A400DEA817 /* TrainingDiaryView.swift */; };
-		EA30B4A5275F525A00DEA817 /* TrainingDiaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30B4A4275F525A00DEA817 /* TrainingDiaryCell.swift */; };
+		EA30B4A5275F525A00DEA817 /* TrainingDiaryTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30B4A4275F525A00DEA817 /* TrainingDiaryTitleCell.swift */; };
 		EA30B4A8276263D100DEA817 /* colorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA30B4A7276263D100DEA817 /* colorExtension.swift */; };
 		EA604815278A211700130A06 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA604813278A211700130A06 /* Model.xcdatamodeld */; };
 		EA6048182795C56700130A06 /* HorizontalCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6048172795C56700130A06 /* HorizontalCalendarView.swift */; };
@@ -24,6 +24,7 @@
 		EA60481C279EC52400130A06 /* HorizontalCalendarViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA60481B279EC52400130A06 /* HorizontalCalendarViewRepresentable.swift */; };
 		EABED36627A9B455005F3EAC /* HorizontalCalendarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED36527A9B455005F3EAC /* HorizontalCalendarDataSource.swift */; };
 		EABED36927A9E89C005F3EAC /* HorizontalCalendarItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED36827A9E89C005F3EAC /* HorizontalCalendarItemModel.swift */; };
+		EABED36B27AC1825005F3EAC /* TrainingDiaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED36A27AC1825005F3EAC /* TrainingDiaryViewModel.swift */; };
 		EAC8E3072769D17A00A03208 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8E3062769D17A00A03208 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +39,7 @@
 		EA30B46C2747EA6800DEA817 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA30B46F2747EA6800DEA817 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EA30B48E275BA8A400DEA817 /* TrainingDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDiaryView.swift; sourceTree = "<group>"; };
-		EA30B4A4275F525A00DEA817 /* TrainingDiaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDiaryCell.swift; sourceTree = "<group>"; };
+		EA30B4A4275F525A00DEA817 /* TrainingDiaryTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDiaryTitleCell.swift; sourceTree = "<group>"; };
 		EA30B4A7276263D100DEA817 /* colorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorExtension.swift; sourceTree = "<group>"; };
 		EA604814278A211700130A06 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		EA6048172795C56700130A06 /* HorizontalCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCalendarView.swift; sourceTree = "<group>"; };
@@ -46,6 +47,7 @@
 		EA60481B279EC52400130A06 /* HorizontalCalendarViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCalendarViewRepresentable.swift; sourceTree = "<group>"; };
 		EABED36527A9B455005F3EAC /* HorizontalCalendarDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCalendarDataSource.swift; sourceTree = "<group>"; };
 		EABED36827A9E89C005F3EAC /* HorizontalCalendarItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCalendarItemModel.swift; sourceTree = "<group>"; };
+		EABED36A27AC1825005F3EAC /* TrainingDiaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDiaryViewModel.swift; sourceTree = "<group>"; };
 		EAC8E3062769D17A00A03208 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -122,8 +124,9 @@
 		EA30B48D275BA86300DEA817 /* trainingDiary */ = {
 			isa = PBXGroup;
 			children = (
+				EABED36C27AC186F005F3EAC /* cells */,
 				EA30B48E275BA8A400DEA817 /* TrainingDiaryView.swift */,
-				EA30B4A4275F525A00DEA817 /* TrainingDiaryCell.swift */,
+				EABED36A27AC1825005F3EAC /* TrainingDiaryViewModel.swift */,
 			);
 			path = trainingDiary;
 			sourceTree = "<group>";
@@ -155,6 +158,14 @@
 				EABED36827A9E89C005F3EAC /* HorizontalCalendarItemModel.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		EABED36C27AC186F005F3EAC /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				EA30B4A4275F525A00DEA817 /* TrainingDiaryTitleCell.swift */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		EAC8E3052769D15200A03208 /* settings */ = {
@@ -236,7 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				299CF3B727A932C800A3B4E6 /* HorizontalCalendarDayOfWeek.swift in Sources */,
-				EA30B4A5275F525A00DEA817 /* TrainingDiaryCell.swift in Sources */,
+				EA30B4A5275F525A00DEA817 /* TrainingDiaryTitleCell.swift in Sources */,
 				EA30B4A8276263D100DEA817 /* colorExtension.swift in Sources */,
 				EA30B46B2747EA6600DEA817 /* ExerciseCategoriesView.swift in Sources */,
 				EA30B48F275BA8A400DEA817 /* TrainingDiaryView.swift in Sources */,
@@ -248,6 +259,7 @@
 				EA604815278A211700130A06 /* Model.xcdatamodeld in Sources */,
 				EABED36627A9B455005F3EAC /* HorizontalCalendarDataSource.swift in Sources */,
 				EABED36927A9E89C005F3EAC /* HorizontalCalendarItemModel.swift in Sources */,
+				EABED36B27AC1825005F3EAC /* TrainingDiaryViewModel.swift in Sources */,
 				2932931D27626A1D005E1C9F /* AddNewExerciseView.swift in Sources */,
 				EAC8E3072769D17A00A03208 /* SettingsViewController.swift in Sources */,
 				EA30B4692747EA6600DEA817 /* FitAngelApp.swift in Sources */,

@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct TrainingDiaryCellModel: Identifiable {
+struct TrainingDiaryTitleCellModel: Identifiable {
     let id: UUID
     let icon: String
     let title: String
@@ -17,9 +17,9 @@ struct TrainingDiaryCellModel: Identifiable {
 }
 
 /// Ячейка с упражнением тренировки
-struct TrainingDiaryCell: View {
+struct TrainingDiaryTitleCell: View {
     
-    var model: TrainingDiaryCellModel
+    var model: TrainingDiaryTitleCellModel
     
     var body: some View {
         HStack(alignment: .top) {
@@ -56,14 +56,14 @@ struct TrainingDiaryCell: View {
 
 struct TrainingDiaryCell_Previews: PreviewProvider {
     static var previews: some View {
-        let model = TrainingDiaryCellModel(
+        let model = TrainingDiaryTitleCellModel(
             id: UUID(),
             icon: "Руки",
             title: "Подъем гантелей",
             subtitle: "К подбородку стоя",
             needAddButton: true)
         
-        TrainingDiaryCell(model: model)
+        TrainingDiaryTitleCell(model: model)
             .background(Color.blackDark)
     }
 }

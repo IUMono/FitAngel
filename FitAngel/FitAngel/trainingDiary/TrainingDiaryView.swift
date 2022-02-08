@@ -11,19 +11,7 @@ import SwiftUI
 /// Экран тренировок
 struct TrainingDiaryView: View {
     
-    // моки
-//    var viewModels: [TrainingDiaryCellModel] = []
-    var viewModels: [TrainingDiaryCellModel] = [
-        TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true),
-        TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: false),
-        TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true),
-        TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true),
-        TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true),
-        TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: false),
-        TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true),
-        TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true),
-        TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: false),
-        TrainingDiaryCellModel(id: UUID(), icon: "Руки", title: "Подъем гантелей", subtitle: "К подбородку стоя", needAddButton: true)]
+    @ObservedObject private var viewModel = TrainingDiaryViewModel()
     
     @State private var isPresented = false
     
@@ -36,7 +24,7 @@ struct TrainingDiaryView: View {
                     HorizontalCalendarViewRepresentable()
                         .frame(width: nil, height: 76, alignment: .center)
                     
-                    if viewModels.isEmpty {
+                    if $viewModel.titleCellModels.isEmpty {
                         
                         Spacer()
                         
@@ -61,8 +49,8 @@ struct TrainingDiaryView: View {
                         Image("Arrow")
                     } else {
                         ScrollView {
-                            ForEach(viewModels) {
-                                TrainingDiaryCell(model: $0)
+                            ForEach(viewModel.titleCellModels) {
+                                TrainingDiaryTitleCell(model: $0)
                             }
                         }
                     }
