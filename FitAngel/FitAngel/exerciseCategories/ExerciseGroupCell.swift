@@ -9,7 +9,7 @@ import SwiftUI
 
 // ячейка для отображения картинки и названия категори упражнения
 struct ExerciseGroupCell: View {
-    var model: ExerciseCategory
+    var model: ExerciseCategoryCellModel
     var body: some View {
         HStack {
             Image(model.imageName)

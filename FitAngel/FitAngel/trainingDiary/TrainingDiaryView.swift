@@ -10,6 +10,9 @@ import SwiftUI
 
 /// Экран тренировок
 struct TrainingDiaryView: View {
+    @Environment(\.managedObjectContext) var managedObjectContext
+//    @FetchRequest(entity: Category.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Category.name, ascending: true)])
+//    private var categories: FetchedResults<Category>
     
     @ObservedObject private var viewModel = TrainingDiaryViewModel()
     
@@ -48,6 +51,11 @@ struct TrainingDiaryView: View {
                         
                         Image("Arrow")
                     } else {
+//                        ScrollView {
+//                            ForEach(categories) {
+//                                Text($0.name ?? "")
+//                            }
+//                        }
                         ScrollView {
                             ForEach(viewModel.titleCellModels) {
                                 TrainingDiaryTitleCell(model: $0)
@@ -67,7 +75,9 @@ struct TrainingDiaryView: View {
                     }
                     .sheet(isPresented: $isPresented, onDismiss: {
                         
-                    }, content: { ExerciseCategoriesView() })
+                    }, content: { ExerciseCategoriesView()
+                            .environment(\.managedObjectContext, managedObjectContext)
+                    })
                     .foregroundColor(Color.black)
                     .background(Color.yellow)
                     .cornerRadius(20)

@@ -9,31 +9,30 @@ import SwiftUI
 
 struct AddNewExerciseView: View {
     
+    @ObservedObject var viewModel = AddNewExerciseViewModel()
+    
     @State private var nameExercise: String = ""
     @State private var subtitle: String = ""
 
     var body: some View {
+        
         ZStack {
             Color.blackDark.ignoresSafeArea()
-                .navigationTitle(nameExercise).foregroundColor(.white)
+                .navigationTitle(nameExercise)
+                .foregroundColor(.white)
+            
             VStack {
-//                Text(String.nameExercise)
-//                    .font(.title)
-//                    .fontWeight(.bold)
-//                    .foregroundColor(Color.white)
-//                    .multilineTextAlignment(.leading)
-//                    .padding()
-                    
-                TextField("", text: $nameExercise)
+                TextField("", text: $viewModel.name)
                     .padding()
                     .textFieldStyle(OvalTextFieldStyle())
                     .placeholder(when: nameExercise.isEmpty) {
                         Text("Название упражнения").foregroundColor(.gray)
                 }
                 
-                TextField("Подзаголовок", text: $subtitle)
+                TextField("Подзаголовок", text: $viewModel.subtitle)
                     .padding()
                     .textFieldStyle(OvalTextFieldStyle())
+                
                 LabelWithButtonView(title: "Тип данных", buttonTitle: "Добавить") {
                     // TODO: реализовать добавление
                 }

@@ -25,6 +25,24 @@
 		EABED36627A9B455005F3EAC /* HorizontalCalendarDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED36527A9B455005F3EAC /* HorizontalCalendarDataSource.swift */; };
 		EABED36927A9E89C005F3EAC /* HorizontalCalendarItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED36827A9E89C005F3EAC /* HorizontalCalendarItemModel.swift */; };
 		EABED36B27AC1825005F3EAC /* TrainingDiaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED36A27AC1825005F3EAC /* TrainingDiaryViewModel.swift */; };
+		EABED38B27B286A1005F3EAC /* AddNewExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED38A27B286A1005F3EAC /* AddNewExerciseViewModel.swift */; };
+		EABED39227B29BE4005F3EAC /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED39027B29BE4005F3EAC /* Category+CoreDataClass.swift */; };
+		EABED39327B29BE4005F3EAC /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED39127B29BE4005F3EAC /* Category+CoreDataProperties.swift */; };
+		EABED3A227B29CCE005F3EAC /* WeightRepeatSet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED39427B29CCE005F3EAC /* WeightRepeatSet+CoreDataClass.swift */; };
+		EABED3A327B29CCE005F3EAC /* WeightRepeatSet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED39527B29CCE005F3EAC /* WeightRepeatSet+CoreDataProperties.swift */; };
+		EABED3A427B29CCE005F3EAC /* TimeSet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED39627B29CCE005F3EAC /* TimeSet+CoreDataClass.swift */; };
+		EABED3A527B29CCE005F3EAC /* TimeSet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED39727B29CCE005F3EAC /* TimeSet+CoreDataProperties.swift */; };
+		EABED3A627B29CCE005F3EAC /* Workout+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED39827B29CCE005F3EAC /* Workout+CoreDataClass.swift */; };
+		EABED3A727B29CCE005F3EAC /* Workout+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED39927B29CCE005F3EAC /* Workout+CoreDataProperties.swift */; };
+		EABED3A827B29CCE005F3EAC /* Set+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED39A27B29CCE005F3EAC /* Set+CoreDataClass.swift */; };
+		EABED3A927B29CCE005F3EAC /* Set+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED39B27B29CCE005F3EAC /* Set+CoreDataProperties.swift */; };
+		EABED3AA27B29CCE005F3EAC /* Exercise+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED39C27B29CCE005F3EAC /* Exercise+CoreDataClass.swift */; };
+		EABED3AB27B29CCE005F3EAC /* Exercise+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED39D27B29CCE005F3EAC /* Exercise+CoreDataProperties.swift */; };
+		EABED3AC27B29CCE005F3EAC /* Muscle+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED39E27B29CCE005F3EAC /* Muscle+CoreDataClass.swift */; };
+		EABED3AD27B29CCE005F3EAC /* Muscle+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED39F27B29CCE005F3EAC /* Muscle+CoreDataProperties.swift */; };
+		EABED3AE27B29CCE005F3EAC /* TimeDistanceSet+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED3A027B29CCE005F3EAC /* TimeDistanceSet+CoreDataClass.swift */; };
+		EABED3AF27B29CCE005F3EAC /* TimeDistanceSet+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED3A127B29CCE005F3EAC /* TimeDistanceSet+CoreDataProperties.swift */; };
+		EABED3B227B3F432005F3EAC /* ExerciseCategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABED3B127B3F432005F3EAC /* ExerciseCategoriesViewModel.swift */; };
 		EAC8E3072769D17A00A03208 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC8E3062769D17A00A03208 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +66,24 @@
 		EABED36527A9B455005F3EAC /* HorizontalCalendarDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCalendarDataSource.swift; sourceTree = "<group>"; };
 		EABED36827A9E89C005F3EAC /* HorizontalCalendarItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCalendarItemModel.swift; sourceTree = "<group>"; };
 		EABED36A27AC1825005F3EAC /* TrainingDiaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDiaryViewModel.swift; sourceTree = "<group>"; };
+		EABED38A27B286A1005F3EAC /* AddNewExerciseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewExerciseViewModel.swift; sourceTree = "<group>"; };
+		EABED39027B29BE4005F3EAC /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EABED39127B29BE4005F3EAC /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EABED39427B29CCE005F3EAC /* WeightRepeatSet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeightRepeatSet+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EABED39527B29CCE005F3EAC /* WeightRepeatSet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeightRepeatSet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EABED39627B29CCE005F3EAC /* TimeSet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeSet+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EABED39727B29CCE005F3EAC /* TimeSet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeSet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EABED39827B29CCE005F3EAC /* Workout+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EABED39927B29CCE005F3EAC /* Workout+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Workout+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EABED39A27B29CCE005F3EAC /* Set+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Set+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EABED39B27B29CCE005F3EAC /* Set+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Set+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EABED39C27B29CCE005F3EAC /* Exercise+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EABED39D27B29CCE005F3EAC /* Exercise+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Exercise+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EABED39E27B29CCE005F3EAC /* Muscle+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Muscle+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EABED39F27B29CCE005F3EAC /* Muscle+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Muscle+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EABED3A027B29CCE005F3EAC /* TimeDistanceSet+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeDistanceSet+CoreDataClass.swift"; sourceTree = "<group>"; };
+		EABED3A127B29CCE005F3EAC /* TimeDistanceSet+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeDistanceSet+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		EABED3B127B3F432005F3EAC /* ExerciseCategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCategoriesViewModel.swift; sourceTree = "<group>"; };
 		EAC8E3062769D17A00A03208 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +103,7 @@
 			children = (
 				2932931C27626A1D005E1C9F /* AddNewExerciseView.swift */,
 				29AA31AC276B88B8004D63A6 /* LabelWithButtonView.swift */,
+				EABED38A27B286A1005F3EAC /* AddNewExerciseViewModel.swift */,
 			);
 			path = newExercise;
 			sourceTree = "<group>";
@@ -76,6 +113,7 @@
 			children = (
 				EA30B46A2747EA6600DEA817 /* ExerciseCategoriesView.swift */,
 				294B9CDE2757BF8C004C78FB /* ExerciseGroupCell.swift */,
+				EABED3B127B3F432005F3EAC /* ExerciseCategoriesViewModel.swift */,
 			);
 			path = exerciseCategories;
 			sourceTree = "<group>";
@@ -83,7 +121,6 @@
 		EA30B45C2747EA6600DEA817 = {
 			isa = PBXGroup;
 			children = (
-				EA604813278A211700130A06 /* Model.xcdatamodeld */,
 				EA30B4672747EA6600DEA817 /* FitAngel */,
 				EA30B4662747EA6600DEA817 /* Products */,
 			);
@@ -100,6 +137,8 @@
 		EA30B4672747EA6600DEA817 /* FitAngel */ = {
 			isa = PBXGroup;
 			children = (
+				EABED3B027B3E8AD005F3EAC /* coreDataModels */,
+				EA604813278A211700130A06 /* Model.xcdatamodeld */,
 				EA6048162795C53100130A06 /* horizontalCalendar */,
 				2932931B27626A00005E1C9F /* newExercise */,
 				EAC8E3052769D15200A03208 /* settings */,
@@ -166,6 +205,29 @@
 				EA30B4A4275F525A00DEA817 /* TrainingDiaryTitleCell.swift */,
 			);
 			path = cells;
+			sourceTree = "<group>";
+		};
+		EABED3B027B3E8AD005F3EAC /* coreDataModels */ = {
+			isa = PBXGroup;
+			children = (
+				EABED39127B29BE4005F3EAC /* Category+CoreDataProperties.swift */,
+				EABED39027B29BE4005F3EAC /* Category+CoreDataClass.swift */,
+				EABED3A127B29CCE005F3EAC /* TimeDistanceSet+CoreDataProperties.swift */,
+				EABED3A027B29CCE005F3EAC /* TimeDistanceSet+CoreDataClass.swift */,
+				EABED39F27B29CCE005F3EAC /* Muscle+CoreDataProperties.swift */,
+				EABED39E27B29CCE005F3EAC /* Muscle+CoreDataClass.swift */,
+				EABED39D27B29CCE005F3EAC /* Exercise+CoreDataProperties.swift */,
+				EABED39C27B29CCE005F3EAC /* Exercise+CoreDataClass.swift */,
+				EABED39B27B29CCE005F3EAC /* Set+CoreDataProperties.swift */,
+				EABED39A27B29CCE005F3EAC /* Set+CoreDataClass.swift */,
+				EABED39927B29CCE005F3EAC /* Workout+CoreDataProperties.swift */,
+				EABED39827B29CCE005F3EAC /* Workout+CoreDataClass.swift */,
+				EABED39727B29CCE005F3EAC /* TimeSet+CoreDataProperties.swift */,
+				EABED39627B29CCE005F3EAC /* TimeSet+CoreDataClass.swift */,
+				EABED39527B29CCE005F3EAC /* WeightRepeatSet+CoreDataProperties.swift */,
+				EABED39427B29CCE005F3EAC /* WeightRepeatSet+CoreDataClass.swift */,
+			);
+			path = coreDataModels;
 			sourceTree = "<group>";
 		};
 		EAC8E3052769D15200A03208 /* settings */ = {
@@ -246,22 +308,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EABED3A727B29CCE005F3EAC /* Workout+CoreDataProperties.swift in Sources */,
+				EABED3A227B29CCE005F3EAC /* WeightRepeatSet+CoreDataClass.swift in Sources */,
+				EABED3A627B29CCE005F3EAC /* Workout+CoreDataClass.swift in Sources */,
 				299CF3B727A932C800A3B4E6 /* HorizontalCalendarDayOfWeek.swift in Sources */,
+				EABED3AF27B29CCE005F3EAC /* TimeDistanceSet+CoreDataProperties.swift in Sources */,
+				EABED3AC27B29CCE005F3EAC /* Muscle+CoreDataClass.swift in Sources */,
+				EABED3AA27B29CCE005F3EAC /* Exercise+CoreDataClass.swift in Sources */,
+				EABED3B227B3F432005F3EAC /* ExerciseCategoriesViewModel.swift in Sources */,
+				EABED3A527B29CCE005F3EAC /* TimeSet+CoreDataProperties.swift in Sources */,
 				EA30B4A5275F525A00DEA817 /* TrainingDiaryTitleCell.swift in Sources */,
+				EABED3A327B29CCE005F3EAC /* WeightRepeatSet+CoreDataProperties.swift in Sources */,
 				EA30B4A8276263D100DEA817 /* colorExtension.swift in Sources */,
+				EABED3A827B29CCE005F3EAC /* Set+CoreDataClass.swift in Sources */,
 				EA30B46B2747EA6600DEA817 /* ExerciseCategoriesView.swift in Sources */,
 				EA30B48F275BA8A400DEA817 /* TrainingDiaryView.swift in Sources */,
+				EABED39227B29BE4005F3EAC /* Category+CoreDataClass.swift in Sources */,
 				EA60481A279EC49D00130A06 /* HorizontalCalendarCollectionCell.swift in Sources */,
+				EABED39327B29BE4005F3EAC /* Category+CoreDataProperties.swift in Sources */,
 				EA60481C279EC52400130A06 /* HorizontalCalendarViewRepresentable.swift in Sources */,
+				EABED38B27B286A1005F3EAC /* AddNewExerciseViewModel.swift in Sources */,
+				EABED3AB27B29CCE005F3EAC /* Exercise+CoreDataProperties.swift in Sources */,
 				EA6048182795C56700130A06 /* HorizontalCalendarView.swift in Sources */,
+				EABED3A427B29CCE005F3EAC /* TimeSet+CoreDataClass.swift in Sources */,
 				29AA31AD276B88B9004D63A6 /* LabelWithButtonView.swift in Sources */,
 				294B9CDF2757BF8C004C78FB /* ExerciseGroupCell.swift in Sources */,
 				EA604815278A211700130A06 /* Model.xcdatamodeld in Sources */,
+				EABED3AE27B29CCE005F3EAC /* TimeDistanceSet+CoreDataClass.swift in Sources */,
 				EABED36627A9B455005F3EAC /* HorizontalCalendarDataSource.swift in Sources */,
 				EABED36927A9E89C005F3EAC /* HorizontalCalendarItemModel.swift in Sources */,
 				EABED36B27AC1825005F3EAC /* TrainingDiaryViewModel.swift in Sources */,
 				2932931D27626A1D005E1C9F /* AddNewExerciseView.swift in Sources */,
 				EAC8E3072769D17A00A03208 /* SettingsViewController.swift in Sources */,
+				EABED3A927B29CCE005F3EAC /* Set+CoreDataProperties.swift in Sources */,
+				EABED3AD27B29CCE005F3EAC /* Muscle+CoreDataProperties.swift in Sources */,
 				EA30B4692747EA6600DEA817 /* FitAngelApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,7 +476,7 @@
 				DEVELOPMENT_TEAM = MGKC338XN6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = FitAngel/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -426,7 +506,7 @@
 				DEVELOPMENT_TEAM = MGKC338XN6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = FitAngel/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Category" representedClassName=".Category" syncable="YES">
+        <attribute name="imageName" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="exercise" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Exercise" inverseName="category" inverseEntity="Exercise"/>
+        <relationship name="muscle" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Muscle" inverseName="category" inverseEntity="Muscle"/>
+        <relationship name="set" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WorkoutSet" inverseName="category" inverseEntity="WorkoutSet"/>
+    </entity>
+    <entity name="Exercise" representedClassName="Exercise" syncable="YES">
+        <attribute name="dateOfCreation" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isNew" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="subtitle" optional="YES" attributeType="String"/>
+        <relationship name="category" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Category" inverseName="exercise" inverseEntity="Category"/>
+        <relationship name="muscle" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Muscle" inverseName="exercise" inverseEntity="Muscle"/>
+        <relationship name="set" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WorkoutSet" inverseName="exercise" inverseEntity="WorkoutSet"/>
+    </entity>
+    <entity name="Muscle" representedClassName="Muscle" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="category" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Category" inverseName="muscle" inverseEntity="Category"/>
+        <relationship name="exercise" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Exercise" inverseName="muscle" inverseEntity="Exercise"/>
+    </entity>
+    <entity name="TimeDistanceSet" representedClassName="TimeDistanceSet" parentEntity="WorkoutSet" syncable="YES">
+        <attribute name="distance" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="timeMS" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="TimeSet" representedClassName="TimeSet" parentEntity="WorkoutSet" syncable="YES">
+        <attribute name="timeMS" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="WeightRepeatSet" representedClassName="WeightRepeatSet" parentEntity="WorkoutSet" syncable="YES">
+        <attribute name="repeats" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Workout" representedClassName="Workout" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="dateOfCreation" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="set" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WorkoutSet" inverseName="workout" inverseEntity="WorkoutSet"/>
+    </entity>
+    <entity name="WorkoutSet" representedClassName="WorkoutSet" isAbstract="YES" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="position" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="workoutPosition" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="set" inverseEntity="Category"/>
+        <relationship name="exercise" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="set" inverseEntity="Exercise"/>
+        <relationship name="workout" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Workout" inverseName="set" inverseEntity="Workout"/>
+    </entity>
+    <elements>
+        <element name="Category" positionX="-106.05859375" positionY="138.26171875" width="128" height="118"/>
+        <element name="Exercise" positionX="133.12890625" positionY="-223.69140625" width="128" height="148"/>
+        <element name="Muscle" positionX="270.19140625" positionY="57.26953125" width="128" height="88"/>
+        <element name="WorkoutSet" positionX="-226.2890625" positionY="-176.98828125" width="128" height="133"/>
+        <element name="TimeDistanceSet" positionX="-374.6953125" positionY="5.58984375" width="128" height="73"/>
+        <element name="TimeSet" positionX="-457.65234375" positionY="-85.99609375" width="128" height="58"/>
+        <element name="WeightRepeatSet" positionX="-354.0703125" positionY="116.50390625" width="128" height="73"/>
+        <element name="Workout" positionX="-61.9140625" positionY="-369.40625" width="128" height="103"/>
+    </elements>
+</model>

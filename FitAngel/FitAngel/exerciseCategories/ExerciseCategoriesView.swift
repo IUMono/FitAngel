@@ -7,23 +7,14 @@
 
 import SwiftUI
 
-struct ExerciseCategory: Identifiable {
-    let imageName: String
-    let name: String
-    let id = UUID()
-}
-
 struct ExerciseCategoriesView: View {
     
-    var groupName = [
-        ExerciseCategory(imageName: "Руки", name: "Руки"),
-        ExerciseCategory(imageName: "Плечи", name: "Плечи"),
-        ExerciseCategory(imageName: "Спина", name: "Спина"),
-        ExerciseCategory(imageName: "Грудь", name: "Грудь"),
-        ExerciseCategory(imageName: "Пресс", name: "Пресс"),
-        ExerciseCategory(imageName: "Ноги", name: "Ноги"),
-        ExerciseCategory(imageName: "Кардио", name: "Кардио")
-    ]
+//    @ObservedObject private var viewModel = ExerciseCategoriesViewModel()
+    
+    @Environment(\.managedObjectContext) var managedObjectContext
+    
+    @FetchRequest(entity: Category.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Category.name, ascending: true)])
+    private var categories: FetchedResults<Category>
     
     @State private var isPresented = false
     
@@ -49,9 +40,7 @@ struct ExerciseCategoriesView: View {
                 .cornerRadius(20)
                 .padding()
                 
-                
                 HStack {
-                    
                     RoundedRectangle(cornerRadius: 0)
                         .frame(height: 1)
                         .foregroundColor(Color.gray)
@@ -64,12 +53,12 @@ struct ExerciseCategoriesView: View {
                     RoundedRectangle(cornerRadius: 0)
                         .frame(height: 1)
                         .foregroundColor(Color.gray)
-                    
                 }
                 
                 ScrollView {
-                    ForEach(groupName) {
-                        ExerciseGroupCell(model: $0)
+                    ForEach(categories) {
+                        let model = ExerciseCategoryCellModel(imageName: $0.imageName ?? "", name: $0.name ?? "")
+                        ExerciseGroupCell(model: model)
                     }
                 }
             }
